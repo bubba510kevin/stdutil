@@ -1,0 +1,31 @@
+gcc "E:\old\\stdutil\bin\stdutil.c" -o "E:\old\stdutil\bin\stdutil.dll" \
+   -shared \
+   -IC:/libs/curl-8.17.0_1-win64-mingw/include \
+   -LC:/libs/curl-8.17.0_1-win64-mingw/lib \
+   -lcurl -lws2_32 -lwldap32 -lwinmm -lbcrypt
+
+gcc "E:\old\stdutil\bin\helper.c" -o "E:\old\stdutil\bin\helper.dll" \
+   -shared \
+   -IC:/libs/curl-8.17.0_1-win64-mingw/include \
+   -LC:/libs/curl-8.17.0_1-win64-mingw/lib \
+   -lcurl -lws2_32 -lwldap32 -lwinmm -lbcrypt
+
+
+g++ "E:\old\stdutil\bin\java.c++" -o "E:\old\stdutil\bin\java.dll" \
+   -shared \
+   -IC:/libs/curl-8.17.0_1-win64-mingw/include \
+   -IC: /Program Files/Java/jdk-17/include/win32 \
+   -IC: /Program Files/Java/jdk-17/include \
+   -LC:/libs/curl-8.17.0_1-win64-mingw/lib \
+   -lcurl -lws2_32 -lwldap32 -lwinmm -lbcrypt
+
+
+g++ "E:/old/stdutil/bin/java.cpp" -o "E:/old/stdutil/bin/java.dll" \
+   -shared \
+   -IC:/libs/curl-8.17.0_1-win64-mingw/include \
+   -I"C:/Program Files/Java/jdk-17/include" \
+   -I"C:/Program Files/Java/jdk-17/include/win32" \
+   -I"E:/old/stdutil/java" \
+   -LC:/libs/curl-8.17.0_1-win64-mingw/lib \
+   -lcurl -lws2_32 -lwldap32 -lwinmm -lbcrypt
+
